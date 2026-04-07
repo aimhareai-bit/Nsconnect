@@ -1,178 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS Connect</title>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
+    background: #0a0a0a;
+    color: white;
 }
 
-header {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: black;
 }
 
-header h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.hero h1 {
+    font-size: 60px;
+    animation: fadeIn 2s ease;
 }
 
-nav {
-  background: #0a3d62;
-  padding: 15px;
-  text-align: center;
+.hero p {
+    margin-top: 10px;
+    color: #ccc;
+    animation: fadeIn 3s ease;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
+/* SLIDER */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.slide-track img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+}
+
+/* SECTION */
 section {
-  padding: 60px 20px;
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
+h2 {
+    margin-bottom: 20px;
 }
 
-.stats {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.stat-box {
-  background: #f4f6f7;
-  padding: 30px;
-  margin: 10px;
-  border-radius: 10px;
-  width: 200px;
+.card {
+    background: #111;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.programs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.program {
-  width: 300px;
-  margin: 15px;
-  padding: 20px;
-  background: #ecf0f1;
-  border-radius: 10px;
-}
-
-.sdg {
-  background: #eaf2f8;
-}
-
-.cta {
-  background: #0a3d62;
-  color: white;
-  padding: 60px 20px;
-}
-
+/* BUTTON */
 button {
-  background: #f39c12;
-  border: none;
-  padding: 15px 25px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+    background: #f39c12;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+/* FOOTER */
 footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #888;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-  <h1>NS Connect</h1>
-  <p>Building a Structured Sports Ecosystem Across Nagaland</p>
-</header>
-
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Impact</a>
-  <a href="#">Programs</a>
-  <a href="#">Contact</a>
-</nav>
-
-<section>
-  <div class="container">
-    <h2>About Us</h2>
-    <p>NS Connect is a sports development organization dedicated to transforming communities through structured sporting events, grassroots programs, and youth engagement initiatives across Nagaland.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <h2>Our Impact</h2>
-    <div class="stats">
-      <div class="stat-box"><h3>1000+</h3><p>Players Engaged</p></div>
-      <div class="stat-box"><h3>20+</h3><p>Events Organized</p></div>
-      <div class="stat-box"><h3>8+</h3><p>Communities Reached</p></div>
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>NS CONNECT</h1>
+        <p>Building Sports • Community • Opportunities</p>
     </div>
-  </div>
 </section>
 
+<!-- SLIDER -->
+<div class="slider">
+    <div class="slide-track">
+        <img src="gdb4.jpeg">
+        <img src="gdp6.jpeg">
+        <img src="ccw.jpeg">
+        <img src="jscs2.jpeg">
+        <img src="jsc1.jpeg">
+        <img src="tlk.jpeg">
+        <img src="pk1.jpeg">
+        <img src="pk2.jpeg">
+        <img src="fc.jpeg">
+        <img src="fc2.jpeg">
+    </div>
+</div>
+
+<!-- PROGRAMS -->
 <section>
-  <div class="container">
     <h2>Our Programs</h2>
-    <div class="programs">
-      <div class="program">
-        <h3>Junkyard Senior Cup</h3>
-        <p>Community-driven football tournament promoting fitness and unity.</p>
-      </div>
-      <div class="program">
-        <h3>Grassroots Development</h3>
-        <p>Training young players and building future talent pipelines.</p>
-      </div>
-      <div class="program">
-        <h3>Inter College Futsal</h3>
-        <p>Competitive platform for youth engagement and exposure.</p>
-      </div>
+    <div class="cards">
+        <div class="card">
+            <h3>Junkyard Senior Cup</h3>
+            <p>Community football tournament promoting unity.</p>
+        </div>
+        <div class="card">
+            <h3>Grassroots Development</h3>
+            <p>Training young players and building talent.</p>
+        </div>
+        <div class="card">
+            <h3>Inter College Futsal</h3>
+            <p>Competitive youth engagement platform.</p>
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="sdg">
-  <div class="container">
-    <h2>SDG Alignment</h2>
-    <p>NS Connect contributes to SDG 3 (Health), SDG 4 (Education), SDG 5 (Gender Equality), and SDG 11 (Sustainable Communities).</p>
-  </div>
+<!-- IMPACT -->
+<section>
+    <h2>Our Impact</h2>
+    <p>1000+ Players • 20+ Events • 8+ Communities</p>
 </section>
 
-<section class="cta">
-  <h2>Partner With Us</h2>
-  <p>Join us in building a stronger sports ecosystem.</p>
-  <button>Contact Us</button>
+<!-- CTA -->
+<section>
+    <h2>Partner With Us</h2>
+    <button>Contact Us</button>
 </section>
 
 <footer>
-  <p>© 2026 NS Connect | All Rights Reserved</p>
+    © 2026 NS Connect
 </footer>
 
 </body>
