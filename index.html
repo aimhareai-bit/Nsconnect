@@ -7,32 +7,43 @@
 <title>NS Connect</title>
 
 <style>
-body { margin:0; font-family: Arial; }
+body { margin:0; font-family:'Segoe UI'; }
 
+/* HERO */
 .hero {
 background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url('https://images.unsplash.com/photo-1517649763962-0c623066013b');
 color:white;
 text-align:center;
-padding:120px 20px;
+padding:140px 20px;
 }
+.hero h1 { font-size:48px; margin:0; }
+.hero p { font-size:20px; }
 
-section { padding:50px; text-align:center; }
+/* SECTION */
+section { padding:60px 20px; text-align:center; }
+.container { max-width:1100px; margin:auto; }
 
+/* CARDS */
 .cards { display:flex; flex-wrap:wrap; justify-content:center; }
-
 .card {
-background:#f4f4f4;
-margin:10px;
-padding:20px;
-border-radius:10px;
-width:250px;
+background:#f5f5f5;
+margin:15px;
+padding:25px;
+border-radius:12px;
+width:260px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* STATS */
+.stats { background:#111; color:white; }
+.stat { font-size:30px; margin:15px; }
+
+/* FOOTER */
 footer {
 background:black;
 color:white;
-padding:20px;
+padding:25px;
 }
 </style>
 </head>
@@ -45,30 +56,48 @@ padding:20px;
 </div>
 
 <section>
-<h2>About</h2>
-<p>NS Connect is a sports organization building events, youth development, and opportunities across Nagaland.</p>
-</section>
-
-<section>
-<h2>Events</h2>
-<div class="cards">
-<div class="card">Junkyard Senior Cup</div>
-<div class="card">Inter College Futsal</div>
-<div class="card">Grassroots Football</div>
+<div class="container">
+<h2>About NS Connect</h2>
+<p>
+NS Connect is a leading sports development organization working to create
+opportunities, organize professional events, and build a strong sports culture across Nagaland.
+</p>
 </div>
 </section>
 
 <section>
-<h2>Impact</h2>
+<div class="container">
+<h2>Our Key Events</h2>
 <div class="cards">
-<div class="card">500+ Players</div>
-<div class="card">20+ Events</div>
-<div class="card">5 Districts</div>
+<div class="card">Junkyard Senior Cup</div>
+<div class="card">Inter College Futsal Championship</div>
+<div class="card">Grassroots Football Program</div>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+<h2>Our Impact</h2>
+<div class="cards">
+<div class="stat">1000+ Players</div>
+<div class="stat">50+ Events</div>
+<div class="stat">10,000+ Audience</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Our Vision</h2>
+<p>
+To become the central hub for sports, talent scouting, youth development, and professional event management in Nagaland.
+</p>
 </div>
 </section>
 
 <footer>
-<p>© NS Connect 2026</p>
+<p>© 2026 NS Connect | All Rights Reserved</p>
 </footer>
 
 </body>
