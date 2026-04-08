@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,144 +6,221 @@
 
 <title>NS Connect</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
-body {
-    background: #0a0f1c;
-    color: white;
+body{
+background:#05070f;
+color:white;
 }
 
-/* NAVBAR */
-nav {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    z-index: 10;
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:100;
 }
 
-nav h1 {
-    color: #00ff88;
+nav h1{
+color:#00ff88;
 }
 
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00ff88;
 }
 
 /* HERO */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
-                url('gdp4.jpeg') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 80px;
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)),
+url('gdp4.jpeg') center/cover no-repeat;
+display:flex;
+align-items:center;
+padding:0 80px;
 }
 
-.hero h1 {
-    font-size: 60px;
-    max-width: 600px;
-    font-weight: 700;
+.hero-content{
+max-width:650px;
+animation:fadeUp 1.2s ease;
 }
 
-.hero p {
-    margin-top: 20px;
-    max-width: 500px;
-    color: #ccc;
+.hero h1{
+font-size:60px;
+line-height:1.1;
 }
 
-.hero button {
-    margin-top: 30px;
-    padding: 12px 25px;
-    border: none;
-    background: #ff6a00;
-    color: white;
-    cursor: pointer;
+.hero span{
+color:#00ff88;
 }
 
-/* SECTION */
-.section {
-    padding: 80px 60px;
+.hero p{
+margin-top:20px;
+color:#ccc;
+}
+
+.hero button{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+background:#00ff88;
+color:black;
+font-weight:600;
+cursor:pointer;
+border-radius:5px;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+.section{
+padding:100px 80px;
 }
 
 /* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
 }
 
-.card {
-    background: #12182a;
-    padding: 40px;
-    border-radius: 15px;
+.card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:0.3s;
 }
 
-.card h2 {
-    margin-bottom: 20px;
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,255,136,0.2);
 }
 
-.card p {
-    color: #bbb;
+.card h2{
+margin-bottom:15px;
+color:#00ff88;
+}
+
+.card p{
+color:#bbb;
 }
 
 /* IMAGE */
-.img-box img {
-    width: 100%;
-    border-radius: 15px;
+.img img{
+width:100%;
+border-radius:20px;
+transition:0.3s;
+}
+
+.img img:hover{
+transform:scale(1.03);
 }
 
 /* EVENTS */
-.events {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.events{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
 }
 
-.event {
-    background: #12182a;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
+.event{
+padding:20px;
+background:rgba(255,255,255,0.05);
+border-radius:10px;
+transition:0.3s;
+text-align:center;
 }
 
-.event:hover {
-    background: #00ff88;
-    color: black;
+.event:hover{
+background:#00ff88;
+color:black;
+transform:translateY(-5px);
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
 }
 
 /* FOOTER */
-footer {
-    background: #05070f;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+footer{
+padding:60px;
+background:#02030a;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+margin-top:50px;
 }
 
-footer input {
-    padding: 10px;
-    border: none;
+footer h3{
+color:#00ff88;
+margin-bottom:10px;
 }
 
-footer button {
-    padding: 10px;
-    background: #ff6a00;
-    border: none;
-    color: white;
+footer input{
+padding:10px;
+border:none;
+margin-right:10px;
+}
+
+footer button{
+padding:10px 15px;
+background:#00ff88;
+border:none;
+cursor:pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 </style>
 </head>
@@ -153,75 +229,95 @@ footer button {
 
 <!-- NAV -->
 <nav>
-    <h1>NS Connect</h1>
-    <div>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Events</a>
-    </div>
+<h1>NS Connect</h1>
+<div>
+<a href="#about">About</a>
+<a href="#events">Events</a>
+<a href="#gallery">Gallery</a>
+</div>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-    <h1>Empowering Communities Through Sports</h1>
-    <p>Building opportunities for youth through structured sports and community engagement.</p>
-    <button>Join Us</button>
+<section class="hero">
+<div class="hero-content">
+<h1>Connecting <span>Sports</span> • Community • Opportunities</h1>
+<p>Empowering youth in Nagaland through structured sports, events, and community engagement.</p>
+<button>Join Us</button>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section grid">
+<div class="card">
+<h2>About NS Connect</h2>
+<p>
+NS Connect is a community-driven sports organisation dedicated to building opportunities for youth through football, events, and partnerships.
+</p>
 </div>
 
-<!-- MISSION -->
-<div class="section grid">
-    <div class="card">
-        <h2>Our Mission</h2>
-        <p>
-        Organise impactful sporting events, promote grassroots development,
-        and build platforms that connect talent with opportunity.
-        </p>
-    </div>
-    <div class="img-box">
-        <img src="gdp6.jpeg">
-    </div>
+<div class="img">
+<img src="gdp6.jpeg">
+</div>
+</section>
+
+<!-- PROGRAM -->
+<section class="section grid">
+<div class="img">
+<img src="ccw.jpeg">
 </div>
 
-<!-- PROGRAMS -->
-<div class="section grid">
-    <div class="img-box">
-        <img src="ccw.jpeg">
-    </div>
-    <div class="card">
-        <h2>Programs</h2>
-        <p>
-        From futsal tournaments to youth development camps,
-        NS Connect drives real community impact through sports.
-        </p>
-        <button>Explore</button>
-    </div>
+<div class="card">
+<h2>Our Mission</h2>
+<p>
+Organise high-quality sporting events, promote grassroots development, build strong partnerships, and create exposure platforms.
+</p>
 </div>
+</section>
 
 <!-- EVENTS -->
-<div class="section">
-    <h2>Our Events</h2>
-    <div class="events">
-        <div class="event">Junkyard Senior Cup (League)</div>
-        <div class="event">Pressure Kicks 2025</div>
-        <div class="event">Grassroots Development Program</div>
-        <div class="event">Fellowship Cup 2026</div>
-        <div class="event">Community Cup 2026</div>
-        <div class="event">WTOW 2026</div>
-    </div>
+<section id="events" class="section">
+<h2 style="color:#00ff88;">Our Events</h2>
+
+<div class="events">
+<div class="event">Junkyard Senior Cup (League)</div>
+<div class="event">Pressure Kicks 2025</div>
+<div class="event">Grassroots Development Programme</div>
+<div class="event">Fellowship Cup 2026</div>
+<div class="event">Community Cup 2026</div>
+<div class="event">WTOW 2026</div>
 </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+<h2 style="color:#00ff88;">Gallery</h2>
+
+<div class="gallery">
+<img src="gdp4.jpeg">
+<img src="gdp6.jpeg">
+<img src="ccw.jpeg">
+<img src="jsc1.jpeg">
+<img src="jsc2.jpeg">
+<img src="tlk.jpeg">
+<img src="pk1.jpeg">
+<img src="pk2.jpeg">
+<img src="fc.jpeg">
+<img src="fc2.jpeg">
+</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-    <div>
-        <h3>Contact</h3>
-        <p>Email: nsconnect06@gmail.com</p>
-    </div>
+<div>
+<h3>Contact</h3>
+<p>Email: nsconnect06@gmail.com</p>
+</div>
 
-    <div>
-        <h3>Newsletter</h3>
-        <input placeholder="Enter email">
-        <button>Subscribe</button>
-    </div>
+<div>
+<h3>Newsletter</h3>
+<input placeholder="Enter email">
+<button>Subscribe</button>
+</div>
 </footer>
 
 </body>
