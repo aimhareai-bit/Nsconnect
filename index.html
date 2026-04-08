@@ -1,242 +1,227 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NS Connect</title>
 
-<!-- PREMIUM FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background: #0a0a0a;
+    background: #0a0f1c;
     color: white;
 }
 
-/* NAV */
+/* NAVBAR */
 nav {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    top: 0;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    z-index: 1000;
+    padding: 20px 50px;
+    z-index: 10;
 }
 
 nav h1 {
     color: #00ff88;
-    font-weight: 600;
 }
 
 nav a {
     color: white;
-    margin-left: 25px;
+    margin-left: 20px;
     text-decoration: none;
 }
 
-nav a:hover {
-    color: #00ff88;
-}
-
-/* HERO (FIXED BRIGHTNESS) */
+/* HERO */
 .hero {
     height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+                url('gdp4.jpeg') center/cover no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),
-                url('gdp4.jpeg') center/cover;
+    padding-left: 80px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    color: #00ff88;
+    font-size: 60px;
+    max-width: 600px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 20px;
+    max-width: 500px;
+    color: #ccc;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    background: #ff6a00;
+    color: white;
+    cursor: pointer;
 }
 
 /* SECTION */
-section {
-    padding: 100px 20px;
-    text-align: center;
+.section {
+    padding: 80px 60px;
 }
 
-/* ABOUT */
-#about h2 {
-    font-size: 42px;
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.card {
+    background: #12182a;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.card h2 {
     margin-bottom: 20px;
-    background: linear-gradient(90deg, #00ff88, #00ccff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-#about p {
-    max-width: 850px;
-    margin: 20px auto;
-    color: #ccc;
-    line-height: 1.8;
+.card p {
+    color: #bbb;
 }
 
-/* CARD */
-.about-card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 750px;
-    backdrop-filter: blur(12px);
+/* IMAGE */
+.img-box img {
+    width: 100%;
+    border-radius: 15px;
 }
 
-/* EVENTS FIXED */
+/* EVENTS */
 .events {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
 }
 
-.event-card {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 15px;
-    width: 260px;
+.event {
+    background: #12182a;
+    padding: 20px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
-.event-card:hover {
+.event:hover {
     background: #00ff88;
     color: black;
-    transform: translateY(-5px);
-}
-
-/* GALLERY FIX */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #00ff88;
-    color: black;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
 }
 
 /* FOOTER */
 footer {
-    padding: 30px;
-    text-align: center;
-    background: black;
-    color: #aaa;
+    background: #05070f;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+footer input {
+    padding: 10px;
+    border: none;
+}
+
+footer button {
+    padding: 10px;
+    background: #ff6a00;
+    border: none;
+    color: white;
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
     <h1>NS Connect</h1>
     <div>
-        <a href="#about">About</a>
-        <a href="#events">Events</a>
-        <a href="#gallery">Gallery</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Events</a>
     </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-    <h1>Connecting Sports • Community • Opportunities</h1>
+    <h1>Empowering Communities Through Sports</h1>
+    <p>Building opportunities for youth through structured sports and community engagement.</p>
+    <button>Join Us</button>
 </div>
 
-<section id="about">
-    <h2>About NS Connect</h2>
-
-    <p>
-    NS Connect is a dynamic, community-driven organisation based in Nagaland,
-    committed to developing sports, empowering youth, and building strong
-    community networks through structured events and initiatives.
-    </p>
-
-    <p>
-    We serve as a platform that connects players, institutions, and communities,
-    creating opportunities for talent development, exposure, and long-term growth.
-    </p>
-
-    <div class="about-card">
-        <strong>Vision:</strong><br><br>
-        To become Nagaland’s leading sports and community platform,
-        empowering youth through innovation, competition, and opportunity.
+<!-- MISSION -->
+<div class="section grid">
+    <div class="card">
+        <h2>Our Mission</h2>
+        <p>
+        Organise impactful sporting events, promote grassroots development,
+        and build platforms that connect talent with opportunity.
+        </p>
     </div>
-
-    <div class="about-card">
-        <strong>Mission:</strong>
-        <ul>
-            <li>Organise high-quality sporting events</li>
-            <li>Promote grassroots youth development</li>
-            <li>Build institutional partnerships</li>
-            <li>Create exposure and growth platforms</li>
-        </ul>
+    <div class="img-box">
+        <img src="gdp6.jpeg">
     </div>
-</section>
+</div>
 
-<section id="events">
+<!-- PROGRAMS -->
+<div class="section grid">
+    <div class="img-box">
+        <img src="ccw.jpeg">
+    </div>
+    <div class="card">
+        <h2>Programs</h2>
+        <p>
+        From futsal tournaments to youth development camps,
+        NS Connect drives real community impact through sports.
+        </p>
+        <button>Explore</button>
+    </div>
+</div>
+
+<!-- EVENTS -->
+<div class="section">
     <h2>Our Events</h2>
-
     <div class="events">
-        <div class="event-card">Junkyard Senior Cup (League)</div>
-        <div class="event-card">Pressure Kicks 2025</div>
-        <div class="event-card">One Day Grassroots Football Development Programme</div>
-        <div class="event-card">Fellowship Cup 2026</div>
-        <div class="event-card">Community Cup 2026</div>
-        <div class="event-card">WTOW 2026</div>
+        <div class="event">Junkyard Senior Cup (League)</div>
+        <div class="event">Pressure Kicks 2025</div>
+        <div class="event">Grassroots Development Program</div>
+        <div class="event">Fellowship Cup 2026</div>
+        <div class="event">Community Cup 2026</div>
+        <div class="event">WTOW 2026</div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div>
+        <h3>Contact</h3>
+        <p>Email: nsconnect06@gmail.com</p>
     </div>
 
-</section>
-<section id="gallery">
-    <h2>Gallery</h2>
-   <div class="gallery">
-    <img src="gdp4.jpeg">
-    <img src="gdp6.jpeg">
-    <img src="ccw.jpeg">
-    <img src="jsc1.jpeg">
-    <img src="jscs2.jpeg">
-    <img src="tlk.jpeg">
-    <img src="pk1.jpeg">
-    <img src="pk2.jpeg">
-    <img src="fc.jpeg">
-    <img src="fc2.jpeg">
-</div>
-</section>
-
-<a class="whatsapp" href="https://wa.me/919123456789">💬</a>
-
-<footer>
-    © 2026 NS Connect <br><br>
-    Email: nsconnect06@gmail.com
+    <div>
+        <h3>Newsletter</h3>
+        <input placeholder="Enter email">
+        <button>Subscribe</button>
+    </div>
 </footer>
 
 </body>
