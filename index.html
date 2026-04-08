@@ -19,7 +19,29 @@
   background: linear-gradient(180deg, #0a0a0a, #111);
   text-align: center;
 }
+.about-card {
+  background: #121212;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  transition: 0.3s;
+}
 
+.about-card:hover {
+  border-color: #00ff88;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,255,136,0.2);
+}
+
+.about-card ul {
+  padding-left: 20px;
+}
+
+.about-card li {
+  margin-bottom: 10px;
+}
 #about h2 {
   font-size: 40px;
   margin-bottom: 40px;
@@ -224,19 +246,20 @@ footer {
     We aim to connect players, institutions, and communities by building platforms that promote discipline, teamwork, and personal growth, while creating meaningful opportunities for participation and development.
   </p>
 
-  <h3>Our Vision</h3>
-  <p>
-    To become a leading platform in Nagaland that empowers youth through sports, community initiatives, and structured opportunities.
-  </p>
+ <h3>Our Vision</h3>
+<div class="about-card">
+  To become a leading platform in Nagaland that empowers youth through sports, community initiatives, and structured opportunities.
+</div>
 
-  <h3>Our Mission</h3>
-  <p>
-    • Organise impactful sporting and community events<br>
-    • Promote grassroots development and youth engagement<br>
-    • Build strong partnerships with institutions and communities<br>
-    • Create platforms for talent exposure and growth
-  </p>
-
+<h3>Our Mission</h3>
+<div class="about-card">
+  <ul>
+    <li>Organise impactful sporting and community events</li>
+    <li>Promote grassroots development and youth engagement</li>
+    <li>Build strong partnerships with institutions and communities</li>
+    <li>Create platforms for talent exposure and growth</li>
+  </ul>
+</div>
   <h3>Contact Us</h3>
   <p>Email: nsconnect06@gmail.com</p>
   <p>WhatsApp: +91XXXXXXXXXX</p>
