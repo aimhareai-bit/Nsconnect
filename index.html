@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,57 +11,60 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
     background: #0a0a0a;
     color: white;
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(to right, #000000cc, #000000cc),
-                url('gdb4.jpeg') center/cover;
+    height: 80vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    background: #000;
 }
 
 .hero h1 {
-    font-size: 60px;
-    letter-spacing: 2px;
+    font-size: 50px;
 }
 
 .hero p {
-    color: #ccc;
+    color: #aaa;
     margin-top: 10px;
 }
 
 /* GALLERY */
 .gallery {
-    padding: 50px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
+    padding: 20px;
 }
 
 .gallery img {
     width: 100%;
     border-radius: 12px;
-    transition: 0.4s;
 }
 
-.gallery img:hover {
-    transform: scale(1.07);
+/* SECTION */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
     padding: 20px;
+    text-align: center;
     background: #111;
     color: #888;
 }
@@ -69,26 +73,35 @@ footer {
 
 <body>
 
-<section class="hero">
+<!-- HERO -->
+<div class="hero">
     <div>
         <h1>NS CONNECT</h1>
         <p>Building Sports • Community • Opportunities</p>
     </div>
-</section>
+</div>
 
-<section class="gallery">
+<!-- GALLERY -->
+<div class="gallery">
     <img src="gdb4.jpeg">
     <img src="gdp6.jpeg">
     <img src="ccw.jpeg">
-    <img src="jsc s2.jpeg">
+    <img src="jscs2.jpeg">
     <img src="jsc1.jpeg">
     <img src="tlk.jpeg">
-    <img src="pk2.jpeg">
     <img src="pk1.jpeg">
+    <img src="pk2.jpeg">
     <img src="fc.jpeg">
     <img src="fc2.jpeg">
+</div>
+
+<!-- ABOUT -->
+<section>
+    <h2>About NS Connect</h2>
+    <p>NS Connect is building a structured sports ecosystem across Nagaland.</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
     © 2026 NS Connect
 </footer>
