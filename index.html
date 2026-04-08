@@ -5,332 +5,256 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS Connect</title>
 
-<link rel="icon" href="ccw.jpeg">
-
-<style>
 <style>
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #0a0a0a, #000);
-  color: white;
-}
-
-/* glow background */
-body::before {
-  content: "";
-  position: fixed;
-  top: -200px;
-  left: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(0,255,136,0.15), transparent);
-  z-index: -1;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  bottom: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(0,204,255,0.15), transparent);
-  z-index: -1;
-}
-
-/* ABOUT SECTION */
-#about {
-  padding: 120px 20px;
-  text-align: center;
-}
-
-/* MAIN TITLE */
-#about h2 {
-  font-size: 42px;
-  margin-bottom: 30px;
-  background: linear-gradient(90deg, #00ff88, #00ccff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* SUB HEADINGS */
-#about h3 {
-  color: #00ff88;
-  font-size: 24px;
-  margin-top: 50px;
-}
-
-/* TEXT */
-#about p {
-  max-width: 900px;
-  margin: 0 auto 20px;
-  color: #ccc;
-  line-height: 1.8;
-}
-
-/* PREMIUM CARD */
-.about-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 20px;
-  padding: 30px;
-  margin: 30px auto;
-  max-width: 700px;
-  transition: 0.4s ease;
-}
-
-.about-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: #00ff88;
-  box-shadow: 0 20px 50px rgba(0,255,136,0.25);
-}
-
-/* LIST */
-.about-card ul {
-  padding-left: 20px;
-}
-
-.about-card li {
-  margin-bottom: 10px;
-}
-
-</style>
-.events div {
-  background: #1a1a1a;
-  padding: 15px 20px;
-  border-radius: 12px;
-  font-weight: 500;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.events div:hover {
-  background: #00ff88;
-  color: black;
-  transform: translateY(-5px);
-}
+/* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* BODY */
 body {
-  background: #0a0a0a;
-  color: white;
+    background: radial-gradient(circle at top, #0a0a0a, #000);
+    color: white;
+    scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
 }
 
-nav h2 {
-  color: white;
+nav h1 {
+    color: #00ff88;
 }
 
 nav a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00ff88;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('gdp4.jpeg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+                url('gdp4.jpeg') center/cover;
 }
 
 .hero h1 {
-  font-size: 3rem;
-}
-
-.hero button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #ff6600;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
+    font-size: 50px;
+    color: #00ff88;
 }
 
 /* SECTION */
 section {
-  padding: 80px 20px;
-  text-align: center;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-/* GLASS CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+/* ABOUT */
+#about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00ff88, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
+#about p {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #ccc;
+    line-height: 1.6;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+/* CARD */
+.about-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,255,136,0.2);
+}
+
+#about h3 {
+    color: #00ff88;
+    margin-top: 30px;
+}
+
+/* LIST */
+.about-card ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* EVENTS */
+.events div {
+    background: #1a1a1a;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.events div:hover {
+    background: #00ff88;
+    color: black;
 }
 
 /* GALLERY */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+    padding: 20px;
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 15px;
-  transition: 0.3s;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: green;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00ff88;
+    color: black;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 /* FOOTER */
 footer {
-  padding: 20px;
-  text-align: center;
-  background: black;
+    text-align: center;
+    padding: 30px;
+    background: black;
+    color: #aaa;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
-  <h2>NS Connect</h2>
-  <div>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#events">Events</a>
-    <a href="#gallery">Gallery</a>
-  </div>
+    <h1>NS Connect</h1>
+    <div>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+    </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div>
-    <h1>NS CONNECT</h1>
-    <p>Building Sports • Community • Opportunities</p>
-    <button onclick="window.location='#about'">Explore</button>
-  </div>
+    <h1>Connecting Sports • Community • Opportunities</h1>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About NS Connect</h2>
+    <h2>About NS Connect</h2>
 
-  <p>
-    NS Connect is a community-driven organisation based in Nagaland, dedicated to creating opportunities for youth through sports, events, and community engagement.
-  </p>
+    <p>
+    NS Connect is a community-driven organisation based in Nagaland,
+    dedicated to creating opportunities for youth through sports, events,
+    and community engagement.
+    </p>
 
-  <p>
-    We aim to connect players, institutions, and communities by building platforms that promote discipline, teamwork, and personal growth, while creating meaningful opportunities for participation and development.
-  </p>
+    <p>
+    We aim to connect players, institutions, and communities by building
+    platforms that promote discipline, teamwork, and personal growth.
+    </p>
 
+    <h3>Our Vision</h3>
+    <div class="about-card">
+        To become a leading platform in Nagaland that empowers youth
+        through sports and structured opportunities.
+    </div>
 
-<h3>Our Vision</h3>
-<div class="about-card">
-  <p>To become a leading platform in Nagaland that empowers youth through sports, community initiatives, and structured opportunities.</p>
-</div>
+    <h3>Our Mission</h3>
+    <div class="about-card">
+        <ul>
+            <li>Organise impactful sporting events</li>
+            <li>Promote grassroots development</li>
+            <li>Build strong partnerships</li>
+            <li>Create talent exposure platforms</li>
+        </ul>
+    </div>
 
-<h3>Our Mission</h3>
-<div class="about-card">
-  <ul>
-    <li>Organise impactful sporting and community events</li>
-    <li>Promote grassroots development and youth engagement</li>
-    <li>Build strong partnerships with institutions and communities</li>
-    <li>Create platforms for talent exposure and growth</li>
-  </ul>
-</div>
-  <h3>Contact Us</h3>
-  <p>Email: nsconnect06@gmail.com</p>
-  <p>WhatsApp: +91XXXXXXXXXX</p>
 </section>
 
 <!-- EVENTS -->
 <section id="events">
-  <h2>Our Events</h2>
-  <div class="events">
-  <div>Junkyard Senior Cup (League)</div>
-  <div>Fellowship Cup 2026</div>
-  <div>Community Cup 2026</div>
-  <div>One Day Grassroots Development Programme</div>
-  <div>Pressure Kicks 2025</div>
-  <div>Other Events</div>
-</div>
+    <h2>Our Events</h2>
+    <div class="events">
+        <div>Junkyard Senior Cup</div>
+        <div>Inter College Futsal</div>
+        <div>Community Tournaments</div>
+    </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="gdp4.jpeg">
-    <img src="gdp6.jpeg">
-    <img src="ccw.jpeg">
-    <img src="jscs2.jpeg">
-    <img src="jsc1.jpeg">
-    <img src="tlk.jpeg">
-    <img src="pk1.jpeg">
-    <img src="pk2.jpeg">
-    <img src="fc.jpeg">
-    <img src="fc2.jpeg">
-  </div>
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="gdp4.jpeg">
+        <img src="gdp6.jpeg">
+        <img src="ccw.jpeg">
+        <img src="jsc1.jpeg">
+        <img src="jsc2.jpeg">
+        <img src="tlk.jpeg">
+    </div>
 </section>
 
 <!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
+<a class="whatsapp" href="https://wa.me/919123456789">💬</a>
 
 <!-- FOOTER -->
 <footer>
-  © 2026 NS Connect <br><br>
-  Contact: +91XXXXXXXXXX <br>
-  Email: nsconnect06@gmail.com
+    © 2026 NS Connect <br><br>
+    Contact: +91XXXXXXXXXX <br>
+    Email: nsconnect06@gmail.com
 </footer>
 
 </body>
